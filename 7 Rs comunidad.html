@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Como llevar acabo las 7Rs en nuestra comunidad.</title>
+  <style>
+    /* Variables de color */
+    :root {
+      --bg-body: #e6f2fa;
+      --text-body: #1e3a5f;
+      --header-bg: #a3c4f3;
+      --header-text: #0f2148;
+      --nav-link: #2e5aa8;
+      --nav-link-hover: #1b3d74;
+      --card-bg: #d0e4fa;
+      --card-text: #1c3558;
+      --cta-bg: #4a7ecb;
+      --cta-text: #e6f2fa;
+      --cta-hover-bg: #3560a0;
+      --table-header-bg: #739edb;
+      --table-header-text: #0a1f40;
+      --table-cell-bg: #aecff9;
+      --footer-bg: #a3c4f3;
+      --footer-text: #1e3a5f;
+    }
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-body);
+      color: var(--text-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      background: var(--header-bg);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--header-text);
+    }
+    nav {
+      margin-top: 0.8rem;
+    }
+    nav a {
+      color: var(--nav-link);
+      margin: 0 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--nav-link-hover);
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .intro h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--header-text);
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: var(--card-text);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .r-grid {
+      display: grid;
+      gap: 1.8rem;
+    }
+    .r-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      padding: 1.8rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .r-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .r-card h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+      color: var(--header-text);
+    }
+    .r-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--card-text);
+    }
+    .media-section iframe,
+    .media-section video {
+      max-width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 12px;
+      margin-top: 2rem;
+      background: transparent;
+    }
+    th, td {
+      padding: 15px 18px;
+      background: var(--table-cell-bg);
+      color: var(--table-header-text);
+      text-align: center;
+      font-weight: 600;
+      border-radius: 10px;
+    }
+    th {
+      background: var(--table-header-bg);
+      color: var(--table-header-text);
+      font-size: 1.1rem;
+    }
+    .cta-button {
+      display: inline-block;
+      margin: 2rem auto 0;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 15px var(--cta-bg)cc;
+      transition: all 0.4s ease;
+      user-select: none;
+    }
+    .cta-button:hover {
+      background: var(--cta-hover-bg);
+      box-shadow: 0 10px 25px var(--cta-hover-bg)cc;
+      color: var(--bg-body);
+    }
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 1.8rem 1rem;
+      margin-top: 4rem;
+      font-size: 1rem;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .image-gallery img {
+      width: 280px;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+    @media(max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .intro h2 {
+        font-size: 1.6rem;
+      }
+      .image-gallery img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Las 7 R en Nuestra Comunidad</h1>
+    <nav>
+      <a href="#las7r">Las 7 R</a>
+      <a href="#tabla">Tabla</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="#imagenes">Imágenes</a>
+      <a href="#actua">Actúa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro" id="intro">
+      <center>
+       <h2>Usando las 7 Rs para cuidar la comunidad y el planeta</h2>
+       <center/>
+      <p>Se trata de 7 principios de sostenibilidad que contribuyen a la optimización de los recursos, la reducción de residuos y la generación de valor en las organizaciones: rediseñar, reducir, reutilizar, reparar, renovar, recuperar y reciclar. .
+
+En ANOVO, como empresa líder en postventa de dispositivos electrónicos, hemos integrado este enfoque en nuestros procesos, sumando además dos estrategias adicionales que refuerzan nuestra visión sostenible. En este artículo, exploramos en detalle la importancia de estas estrategias y cómo implementarlas eficazmente..</p>
+    </section>
+
+  
+  <section class="r-grid" id="las7r">
+  <article class="r-card">
+    <h3>Rediseñar</h3>
+    <p>Innovar en el diseño de productos para que sean duraderos, reparables y reciclables desde su concepción, minimizando impactos ambientales. </p>
+  </article>
+  <article class="r-card">
+    <h3>Reducir</h3>
+    <p>Consumir de forma inteligente: elegir productos de alta calidad, con poco embalaje y eficiencia energética, para generar menos residuos. </p>
+  </article>
+  <article class="r-card">
+    <h3>Reutilizar</h3>
+    <p>Prolongar la vida útil de los objetos dándoles nuevos usos o compartiéndolos, evitando su descarte prematuro.</p>
+  </article>
+  <article class="r-card">
+    <h3>Reparar</h3>
+    <p>Arreglar aquello que se ha dañado o desgastado antes de desecharlo, promoviendo la cultura del “reparar” en lugar del consumo. </p>
+  </article>
+  <article class="r-card">
+    <h3>Renovar</h3>
+    <p>Actualizar objetos o espacios viejos con pequeños cambios funcionales o estéticos para darles una nueva vida útil. </p>
+  </article>
+  <article class="r-card">
+    <h3>Recuperar</h3>
+    <p>Extraer y reaprovechar materiales de productos al final de su uso para reincorporarlos al ciclo productivo. </p>
+  </article>
+  <article class="r-card">
+    <h3>Reciclar</h3>
+    <p>Transformar desechos en materia prima para fabricar nuevos productos, siempre que las anteriores R no hayan sido posibles. </p>
+  </article>
+</section>
+
+
+
+     <section id="tabla">
+  <h2 style="text-align:center; margin-bottom:1rem;">Esta es la importancia y algunos ejemplos </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>R</th>
+        <th>Importancia</th>
+        <th>Ejemplo Local</th>
+        <th>Beneficio Ambiental</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rediseñar</td>
+        <td>Incorporar sostenibilidad desde el diseño</td>
+        <td>Productos de ferias con empaques biodegradables</td>
+        <td>Reduce residuos plásticos desde el origen</td>
+      </tr>
+      <tr>
+        <td>Reducir</td>
+        <td>Minimizar consumo de recursos</td>
+        <td>Ajuste de termostatos y uso de LEDs</td>
+        <td>Menor gasto energético y huella de carbono</td>
+      </tr>
+      <tr>
+        <td>Reutilizar</td>
+        <td>Extender vida útil de los objetos</td>
+        <td>Intercambio local de ropa y libros</td>
+        <td>Evita que artículos útiles terminen en vertederos</td>
+      </tr>
+      <tr>
+        <td>Reparar</td>
+        <td>Evitar compra de productos nuevos</td>
+        <td>Talleres comunitarios de arreglos de bicicletas y ropa</td>
+        <td>Reduce consumo de materias primas y basura</td>
+      </tr>
+      <tr>
+        <td>Renovar</td>
+        <td>Actualizar productos o espacios viejos</td>
+        <td>Pintura y reacondicionamiento de muebles viejos</td>
+        <td>Evita escombros y promueve el reciclaje interno</td>
+      </tr>
+      <tr>
+        <td>Recuperar</td>
+        <td>Reaprovechar materiales post-consumo</td>
+        <td>Recolección de aceite usado y metales para reciclaje</td>
+        <td>Reintroduce recursos al ciclo productivo</td>
+      </tr>
+      <tr>
+        <td>Reciclar</td>
+        <td>Cerrar el ciclo de vida de materiales</td>
+        <td>Separar vidrio, papel, plástico y llevar a centros locales</td>
+        <td>Menor extracción de recursos y contaminación</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<center>
+    <section class="media-section" id="multimedia">
+      <h1>Un video para razonar</h1>
+<center/>
+      <center>
+<section class="media-container">
+  
+  
+
+    <!-- Video de las 7 R -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YGMeO5L_LAs" 
+            title="Las 7 R del Reciclaje" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+<h2>🎵 audio: CANCION</h2>
+<audio controls>
+  <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/wav">
+  </audio>
+
+
+
+    <section id="imagenes">
+      <h2 style="text-align:center; margin: 2rem 0;">Imágenes para hacer conciencia </h2>
+      <div class="image-gallery">
+        <img src="https://static.vecteezy.com/system/resources/previews/021/501/598/non_2x/boy-recycling-cartoon-colored-clipart-illustration-free-vector.jpg" alt="Símbolo de reciclaje"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8YvohWVG5MSQjzDtSrm8g4i4eXnuVMaY0A&s" alt="Manos plantando árbol"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbViRjOa8rpwSsTRy1mYM0oXehw9lprkToYQ&s" alt="Basura reciclable"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKrCujOH_YHG-mebbmoXLjHGAD_TZHQbR0Rw&s" alt="Naturaleza verde"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3FpTK2JPDIDmhv1VMaBHoPEJRcZBOfQAGQ&s" alt="Separación de basura"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMdk-V2AY8nxPMYbN85WZJLNFugG57og14ow&s" alt="Reparar objetos"/>
+      </div>
+    </section>
+
+    <section id="actua" style="text-align:center; margin: 4rem 0;">
+      <h2>¡Tú Puedes Hacer la Diferencia!</h2>
+      <p style="font-size:1.2rem; max-width:600px; margin: 0 auto 2rem auto; color:var(--nav-link);">
+       Para mejorar el reciclaje, es fundamental clasificar correctamente los residuos, reducir el consumo y optar por productos reciclables, y promover el reciclaje en comunidad. 
+<center>
+En detalle, se pueden tomar las siguientes medidas:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Las 7 Erres del Consumo Responsable</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f0f8f5; padding: 20px; }
+    h1 { text-align: center; color: #2a7c5e; }
+    .card { background: #fff; border-radius: 10px; padding: 15px; margin: 10px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { color: #1c5f4a; }
+    .formula { background: #e1f5e9; padding: 10px; border-radius: 5px; margin-top: 10px; }
+    label, input, button { display: block; margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>🌿 Las 7 Erres del Consumo Responsable 🌿</h1>
+
+  <div class="card">
+    <h2>Rediseñar</h2>
+    <p>Replantea productos o procesos para reducir su impacto ambiental desde su origen.</p>
+  </div>
+
+  <div class="card">
+    <h2>Reducir</h2>
+    <p>Disminuye el uso de recursos y la generación de residuos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Reutilizar</h2>
+    <p>Da un segundo uso a objetos o materiales antes de desecharlos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Reparar</h2>
+    <p>Arregla productos en lugar de reemplazarlos para prolongar su vida útil.</p>
+  </div>
+
+  <div class="card">
+    <h2>Renovar</h2>
+    <p>Moderniza o actualiza artículos antiguos para seguir utilizándolos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Recuperar</h2>
+    <p>Rescata materiales útiles de residuos para nuevos usos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Reciclar</h2>
+    <p>Convierte residuos en nuevos productos mediante procesos industriales.</p>
+  </div>
+
+  <div class="card">
+    <h2>📊 Calcula tu reducción de residuos</h2>
+    <p>Introduce la cantidad de residuos que produces y cuánto planeas reducir:</p>
+    <div class="formula">
+      <label for="residuos">Cantidad de residuos generados (kg):</label>
+      <input type="number" id="residuos" placeholder="Ej. 50">
+      
+      <label for="reduccion">Porcentaje de reducción (%):</label>
+      <input type="number" id="reduccion" placeholder="Ej. 20">
+      
+      <button onclick="calcularReduccion()">Calcular</button>
+      
+      <p id="resultado"></p>
+    </div>
+  </div>
+
+  <script>
+    function calcularReduccion() {
+      let residuos = parseFloat(document.getElementById('residuos').value);
+      let reduccion = parseFloat(document.getElementById('reduccion').value);
+      if (isNaN(residuos) || isNaN(reduccion)) {
+        document.getElementById('resultado').innerText = 'Por favor, introduce valores válidos.';
+        return;
+      }
+      let resultado = residuos - (residuos * reduccion / 100);
+      document.getElementById('resultado').innerText = 
+        'Tu nueva cantidad de residuos sería: ' + resultado.toFixed(2) + ' kg.';
+    }
+  </script>
+
+</body>
+</html>
+<center/>
+
+
+  <footer>
+    <p>Enrique Leyva Lobato CEB 6/13</p>
+    <a href="C:\Users\ALUMNO 32\Downloads\7r.html" style="color: var(--nav-link); text-decoration: none;">Retroseder a la primer pagina</a>
+  </footer>
+</body>
+</html>
